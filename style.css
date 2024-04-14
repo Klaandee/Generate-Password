@@ -1,0 +1,91 @@
+/* All */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #404040;
+}
+
+body {
+  font-family: monospace, sans-serif;
+}
+
+/* Header Page */
+
+.header-page h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.header-page p {
+  text-align: center;
+}
+
+.inputs {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.inputs input {
+  padding: 5px 15px;
+  font-family: monospace, sans-serif;
+  border: 2px solid #808080;
+  border-radius: 5px;
+}
+
+.inputs input:focus {
+  outline: none;
+}
+
+.btn {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn button {
+  color: #fff;
+  background: #505050;
+  padding: .80rem;
+  border: 2px solid #505050;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .4s ease-in;
+  box-shadow: 0px 0px 10px #505050;
+}
+
+.btn button:hover {
+  box-shadow: 0px 0px 10px #000;
+  background: #5050503d;
+  border: 2px solid #000;
+  color: #000;
+}
+
+#password {
+  text-align: center;
+  margin-top: 1rem;
+  color: #008000;
+}
+
+.alert-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #808080;
+  width: 40rem;
+  color: #fff;
+  border-radius: 20px;
+}

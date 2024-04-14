@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/svg+xml" href="/key.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generate Password</title>
+</head>
+
+<body>
+  <!-- Header Page -->
+  <header class="header-page">
+    <h1>Generate Password</h1>
+    <p>Generate a random password by clicking the button below.</p>
+    <div class="inputs">
+      <label for="Password length"></label>
+      <input type="text" id="lengthInput" minlength="1" maxlength="2" placeholder="Password length">
+      <input type="text" id="specialCharsInput" placeholder="Special Chars" maxlength="10">
+    </div>
+    <div class="btn">
+      <button id="generate">Gen Password</button>
+      <button id="copyPasswordBtn" style="display: none;">Copy Password</button>
+    </div>
+    <div id="password"></div>
+    <div class="alert-cont">
+      <div class="alert">
+        <p>These passwords are not saved in any database or
+          anywhere.<br> They are characters automatically generated at the moment.<br> No one but you can save these
+          automatically
+          generated characters.</p>
+      </div>
+    </div>
+  </header>
+  <script src="/main.js"></script>
+</body>
+
+</html>
