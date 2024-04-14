@@ -9,7 +9,7 @@
   <title>Generate Password</title>
 </head>
 
-<body>
+<body class="theme-light">
   <!-- Header Page -->
   <header class="header-page">
     <h1>Generate Password</h1>
@@ -20,8 +20,8 @@
       <input type="text" id="specialCharsInput" placeholder="Special Chars" maxlength="10">
     </div>
     <div class="btn">
-      <button id="generate">Gen Password</button>
-      <button id="copyPasswordBtn" style="display: none;">Copy Password</button>
+      <button id="generate" class="button">Gen Password</button>
+      <button id="copyPasswordBtn" class="button" style="display: none;">Copy Password</button>
     </div>
     <div id="password"></div>
     <div class="alert-cont">
@@ -33,6 +33,14 @@
       </div>
     </div>
   </header>
+  <!-- Down Page -->
+  <section class="down">
+    <!-- SVG GitHub extraido de Bootstrap icons -->
+    <a href="https://github.com/Klaandee/generate-password">
+      <img src="./public/github.svg" alt="GitHub - Git">
+    </a>
+    <button id="toggle-theme">Toggle Theme</button>
+  </section>
   <script src="/main.js"></script>
 </body>
 

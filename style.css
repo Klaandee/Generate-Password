@@ -12,6 +12,17 @@
 
 body {
   font-family: monospace, sans-serif;
+  transition: background .3s ease;
+}
+
+.theme-dark {
+  background: #202020;
+  color: #fff;
+}
+
+.theme-light {
+  background: #fff;
+  color: #000;
 }
 
 /* Header Page */
@@ -51,7 +62,7 @@ body {
   margin-top: 1rem;
 }
 
-.btn button {
+.button {
   color: #fff;
   background: #505050;
   padding: .80rem;
@@ -63,7 +74,26 @@ body {
   box-shadow: 0px 0px 10px #505050;
 }
 
-.btn button:hover {
+.btn-dark {
+  background: #fff;
+  color: #000;
+  padding: .80rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .4s ease-in;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.btn-dark:hover {
+  box-shadow: 0px 0px 10px #fff;
+  background: #505050;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.button:hover {
   box-shadow: 0px 0px 10px #000;
   background: #5050503d;
   border: 2px solid #000;
@@ -88,4 +118,31 @@ body {
   width: 40rem;
   color: #fff;
   border-radius: 20px;
+}
+
+/* Down Page */
+
+.down {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: .50rem;
+}
+
+.down img {
+  width: 2rem;
+}
+
+#toggle-theme {
+  padding: .50rem;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid #808080;
+  transition: .4s ease-in;
+}
+
+#toggle-theme:hover {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
 }

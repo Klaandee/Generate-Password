@@ -58,3 +58,62 @@ generatePasswordBtn.addEventListener("click", showPassword);
 
 const copyPasswordBtn = document.getElementById("copyPasswordBtn");
 copyPasswordBtn.addEventListener("click", copyPassword);
+
+// Toggle Theme
+
+const themeBtn = document.getElementById('toggle-theme');
+const headBtn = document.getElementById('generate');
+const copyBtn = document.getElementById('copyPasswordBtn');
+const body = document.body;
+
+function toggleTheme() {
+  if (body.classList.contains("theme-light")) {
+    // Body
+    body.classList.remove("theme-light");
+    body.classList.add("theme-dark");
+    // Head Button
+    headBtn.classList.remove("button");
+    headBtn.classList.add("btn-dark");
+    // Copy Button
+    copyBtn.classList.remove("button");
+    copyBtn.classList.add("btn-dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    // Body
+    body.classList.remove("theme-dark");
+    body.classList.add("theme-light");
+    // Head Button
+    headBtn.classList.add("button");
+    headBtn.classList.remove("btn-dark");
+    // Copy Button
+    copyBtn.classList.add("button");
+    copyBtn.classList.remove("btn-dark");
+    localStorage.setItem("theme", "light");
+  }
+}
+
+themeBtn.addEventListener("click", toggleTheme);
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  // Body
+  body.classList.remove("theme-light");
+  body.classList.add("theme-dark");
+  // Head Button
+  headBtn.classList.remove("button");
+  headBtn.classList.add("btn-dark");
+  // Copy Button
+  copyBtn.classList.remove("button");
+  copyBtn.classList.add("btn-dark");
+} else {
+  // Body
+  body.classList.remove("theme-dark");
+  body.classList.add("theme-light");
+  // Head Button
+  headBtn.classList.add("button");
+  headBtn.classList.remove("btn-dark");
+  // Copy Button
+  copyBtn.classList.add("button");
+  copyBtn.classList.remove("btn-dark");
+  localStorage.setItem("theme", "light");
+}
