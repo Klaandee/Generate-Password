@@ -33,9 +33,12 @@ function generatePassword() {
 function showPassword() {
   const generatedPassword = generatePassword();
   const passwordElement = document.getElementById("password");
+  const errorElement = document.getElementById("error");
   if (generatedPassword === undefined) {
-    passwordElement.textContent = "Length setting invalid";
+    errorElement.textContent = "Length setting invalid";
+    return;
   } else {
+    errorElement.textContent = "";
     passwordElement.textContent = "Your new password: " + generatedPassword;
     document.getElementById("copyPasswordBtn").style.display = "inline";
   }
